@@ -1,22 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Gate - SaaS Starter
 
-## Getting Started
+A full-stack TypeScript SaaS starter with Next.js frontend and Express backend.
 
-First, run the development server:
+## Features
+
+- **Frontend**: Next.js 14 with TypeScript, Tailwind CSS, and shadcn/ui
+- **Backend**: Express.js with TypeScript and Prisma ORM
+- **Database**: PostgreSQL with Prisma
+- **Authentication**: JWT with HTTP-only cookies
+- **Payments**: Stripe integration for subscriptions
+- **UI**: Modern, responsive design with shadcn/ui components
+- **Real-time**: Analytics and subscription management
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- PostgreSQL database
+- Stripe account (for payments)
+
+### Setup
+
+1. **Clone and install dependencies:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install frontend dependencies
+npm install
+
+# Install backend dependencies
+cd backend && npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Environment Setup:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Frontend (.env.local)
+cp .env.local.example .env.local
+
+# Backend (backend/.env)
+cp backend/.env.example backend/.env
+```
+
+3. **Database Setup:**
+
+```bash
+cd backend
+npm run db:generate
+npm run db:migrate
+npm run db:seed
+```
+
+4. **Start Development:**
+
+```bash
+# Terminal 1: Start backend (from backend folder)
+npm run dev
+
+# Terminal 2: Start frontend (from root folder)
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

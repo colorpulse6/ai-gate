@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Backend specific
+backend/.env
+backend/dist/
+backend/build/
+backend/node_modules/
+
+# Database
+*.db
+*.sqlite
+
+# Prisma
+backend/prisma/migrations/
+!backend/prisma/migrations/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
